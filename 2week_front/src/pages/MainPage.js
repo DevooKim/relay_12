@@ -92,7 +92,7 @@ const MainPage = ()=>{
             <ul className="BoardHeader">
                 <PostItem post={PostHeader}></PostItem>
             </ul>
-      <Posts posts={currentPosts} loading={loading} />
+            <Posts posts={currentPosts} loading={loading} />
         </div>
         <div>
             <div>
