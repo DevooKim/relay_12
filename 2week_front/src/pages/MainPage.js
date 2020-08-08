@@ -85,22 +85,26 @@ const MainPage = ()=>{
 
     return (
     <>
-    <div className="container ">
+    <div className="container">
         <div className="FilterbtnContainer"><button onClick={FilterChat}>{flag?"잡답거르기":"잡답보기"}</button></div>
 
-        <div className="BoardContainer">    <
-            ul className="BoardHeader">
-      <PostItem post={PostHeader}></PostItem>
-      </ul>
+        <div className="BoardContainer">
+            <ul className="BoardHeader">
+                <PostItem post={PostHeader}></PostItem>
+            </ul>
       <Posts posts={currentPosts} loading={loading} />
-    </div>
-    <div>
-<div><Pagination currentPage={currentPage} postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} /></div>
-    <div className="WriteButtonContainer"><Link to="/write"><button>글쓰기</button></Link> </div>  
-    </div>
+        </div>
+        <div>
+            <div>
+                <Pagination currentPage={currentPage} postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
+            </div>
+        <div className="WriteButtonContainer">
+            <Link to="/write"><button>글쓰기</button></Link> 
+        </div>  
+        </div>
     </div>
 
     </>
-        )
+    )
 }
 export default MainPage
